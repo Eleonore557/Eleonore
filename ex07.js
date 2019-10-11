@@ -9,13 +9,14 @@ module.exports = function kebabcase(str = "") {
     {
         finish = str.replace(/([A-Z])/g, " $1")
         finish = finish.replace(/ /, "")
-        finish = finish.replace(/ /g, "-")
+        finish = finish.replace(/ /g, "_")
     }
     else
     {
-        finish = str.replace(/ /g, "-")
+        finish = str.replace(/ /g, "_")
     }
     finish = finish.toLowerCase()
 
     return finish
 }
+
